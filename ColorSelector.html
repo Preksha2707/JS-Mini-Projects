@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="Color.css">
+        <title>Color Scheme Switcher</title>
+      
+
+    </head>
+    <body >
+        <h1 class="cd"> Color Scheme Corrector</h1>
+        <div class="ab">
+            <span onclick="color(this)" class="color clr1"></span>
+            <span  onclick="color(this)" class="color clr2"></span>
+            <span onclick="color(this)" class="color clr3"></span>
+            <span  onclick="color(this)" class="color clr4"></span>
+            <span  onclick="color(this)" class="color clr5"></span>
+
+        </div>
+        <h2 class="ef">Try clicking on one of the colors to change the
+            background color of this page!</h2>
+        
+    </body>
+</html>
+<script>
+    function color(z){
+        var a = getComputedStyle(z)
+        var b =a.backgroundColor;
+        document.getElementsByTagName("BODY")[0].style.backgroundColor=b;
+    }
+</script>
