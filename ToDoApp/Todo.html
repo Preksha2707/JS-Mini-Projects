@@ -5,6 +5,7 @@
             ToDo List
 
         </title>
+        <script src="https://kit.fontawesome.com/f30fac2c61.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="Todo.css">
 
     </head>
@@ -23,13 +24,25 @@
          
      </body>
 </html>
+
 <script>
     let inputs=document.getElementById("inp");
     let text = document.querySelector(".text");
 function Add()
 {
     if (inputs.value== "" ){
-        alert("Please Enter the task");
+        alert("Please Enter the Task");
     }
+    else{
+        let newEle= document.createElement("ul");
+        newEle.innerHTML=`${inputs.value} <i class ="fa-solid fa-trash"></i>`;
+        text.appendChild(newEle);
+        inputs.value="";
+        newEle.querySelector("i").addEventListener("click", remove);
+        function remove(){
+            newEle.remove()
+        }
+    }
+
 }
 </script>
