@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="key.css">
+    <title>KeyCode Checker</title>
+</head>
+<body>
+   <div class="container">
+    
+       <h1>Press any key to get the Javascript Event Keycode Info</h1>  
+   
+        <div class="ab" id="key">
+               <h4>e.key</h4>
+        </div>
+        <div class="ab" id="keyCode">
+              <h4>e.keyCode</h4>
+        </div>
+        <div class="ab" id="code">
+             <h4>e.code</h4>
+        </div>
+   </div>
+  
+</body>
+</html>
+<script>
+const onButtonClick = (e) => {
+  const key = document.getElementById("key");
+  const keyCode = document.getElementById("keyCode");
+  const code = document.getElementById("code");
+
+  e.key === " " ? (key.textContent = "SPACE") : (key.textContent = e.key);
+  keyCode.textContent = e.keyCode;
+  code.textContent = e.code;
+};
+
+window.addEventListener("keydown", onButtonClick);
+</script>
