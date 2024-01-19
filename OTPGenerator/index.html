@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+   
+    <body class="container">
+        <div >
+            <p class="btn" id="otp"></p><br>
+        </div>
+        
+        
+       
+    </body>
+</html>
+<script>
+    const generateOtp =()=>{
+
+let otp="";
+for (let i=0;i<5;i++)
+{
+    otp+= Math.floor(Math.random()*10);
+}
+
+
+return Number(otp);
+}
+document.getElementById("otp").innerHTML=generateOtp();
+console.log("generateOtp-", generateOtp());
+</script>
